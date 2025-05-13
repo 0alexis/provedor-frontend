@@ -11,7 +11,7 @@ const Asignacion = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://18.188.28.79:9525/api/despacho/asignacion"
+        "http://18.222.168.193:9525/api/despacho/asignacion"
       );
       setData(Array.isArray(response.data) ? response.data : [response.data]);
     } catch (err) {
@@ -22,7 +22,7 @@ const Asignacion = () => {
   const handlePost = async () => {
     try {
       const response = await axios.post(
-        "http://18.188.28.79:9525/api/despacho/asignacion",
+        "http://18.222.168.193:9525/api/despacho/asignacion",
         formData
       );
       setData([...data, response.data]);

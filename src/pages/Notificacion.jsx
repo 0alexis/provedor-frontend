@@ -12,7 +12,7 @@ const Notificacion = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://18.188.28.79:9525/api/despacho/notificacion"
+        "http://18.222.168.193:9525/api/despacho/notificacion"
       );
       setData(Array.isArray(response.data) ? response.data : [response.data]);
     } catch (err) {
@@ -23,7 +23,7 @@ const Notificacion = () => {
   const fetchById = async () => {
     try {
       const response = await axios.get(
-        `http://18.188.28.79:9525/api/despacho/notificacion/${id}`
+        `http://18.222.168.193:9525/api/despacho/notificacion/${id}`
       );
       setData([response.data]);
     } catch (err) {
@@ -34,7 +34,7 @@ const Notificacion = () => {
   const handlePost = async () => {
     try {
       const response = await axios.post(
-        "http://18.188.28.79:9525/api/despacho/notificacion",
+        "http://18.222.168.193:9525/api/despacho/notificacion",
         formData
       );
       setData([...data, response.data]);
@@ -46,7 +46,7 @@ const Notificacion = () => {
   const handlePut = async () => {
     try {
       const response = await axios.put(
-        `http://18.188.28.79:9525/api/despacho/notificacion/${id}/confirmar`,
+        `http://18.222.168.193:9525/api/despacho/notificacion/${id}/confirmar`,
         formData
       );
       fetchData();
