@@ -12,7 +12,7 @@ const Cierre = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://3.21.248.127:9525/api/despacho/cierre"
+        "http://18.188.28.79:9525/api/despacho/cierre"
       );
       setData(Array.isArray(response.data) ? response.data : [response.data]);
     } catch (err) {
@@ -23,7 +23,7 @@ const Cierre = () => {
   const fetchById = async () => {
     try {
       const response = await axios.get(
-        `http://3.21.248.127:9525/api/despacho/cierre/${id}`
+        `http://18.188.28.79:9525/api/despacho/cierre/${id}`
       );
       setData([response.data]);
     } catch (err) {
@@ -34,7 +34,7 @@ const Cierre = () => {
   const handlePost = async () => {
     try {
       const response = await axios.post(
-        "http://3.21.248.127:9525/api/despacho/cierre",
+        "http://18.188.28.79:9525/api/despacho/cierre",
         formData
       );
       setData([...data, response.data]);
