@@ -12,7 +12,7 @@ const Seguimiento = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://18.222.168.193:9525/api/despacho/seguimiento"
+        "http://3.16.82.170:9525/api/despacho/seguimiento"
       );
       setData(Array.isArray(response.data) ? response.data : [response.data]);
     } catch (err) {
@@ -23,7 +23,7 @@ const Seguimiento = () => {
   const fetchById = async () => {
     try {
       const response = await axios.get(
-        `http://18.222.168.193:9525/api/despacho/seguimiento/${id}`
+        `http://3.16.82.170:9525/api/despacho/seguimiento/${id}`
       );
       setData([response.data]);
     } catch (err) {
@@ -34,7 +34,7 @@ const Seguimiento = () => {
   const handlePost = async () => {
     try {
       const response = await axios.post(
-        "http://18.222.168.193:9525/api/despacho/seguimiento",
+        "http://3.16.82.170:9525/api/despacho/seguimiento",
         formData
       );
       setData([...data, response.data]);
@@ -46,7 +46,7 @@ const Seguimiento = () => {
   const handlePut = async () => {
     try {
       const response = await axios.put(
-        `http://18.222.168.193:9525/api/despacho/seguimiento/${id}`,
+        `http://3.16.82.170:9525/api/despacho/seguimiento/${id}`,
         formData
       );
       fetchData();
