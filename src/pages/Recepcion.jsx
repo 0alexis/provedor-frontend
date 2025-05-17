@@ -11,7 +11,7 @@ const Recepcion = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://3.145.50.93:9525/api/despacho/recepcion"
+        "http://3.132.120.28:9525/api/despacho/recepcion"
       );
       setData(Array.isArray(response.data) ? response.data : [response.data]);
     } catch (err) {
@@ -22,7 +22,7 @@ const Recepcion = () => {
   const handlePost = async () => {
     try {
       const response = await axios.post(
-        "http://3.145.50.93:9525/api/despacho/recepcion",
+        "http://3.132.120.28:9525/api/despacho/recepcion",
         formData
       );
       setData([...data, response.data]);
